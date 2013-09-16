@@ -1,0 +1,45 @@
+* {
+	font-family: sans-serif;
+	line-height: 1em;
+	font-size: 16px;
+}
+
+#wrapper {
+	margin: 100px;
+}
+
+figure {
+	position: relative;
+	width: 177px;
+}
+
+figure figcaption {
+	position: absolute;
+	top: 0;
+	background-color: #D40000;
+	color: #FFF;
+	width: calc(180px + 50%);
+	text-align: center;
+	padding: 5px 0px;
+	left: calc(-180px / 2 + -50% / 2);
+	opacity: 0;
+	transition: all ease-in-out 0.3s;
+	margin: 0 50%;
+	border-radius: 4px;
+}
+figure figcaption:after {
+	background-color: #D40000;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	content: " ";
+	bottom: -5px;
+	margin: 0 50%;
+	left: -5px;
+	transform: rotate(45deg);
+}
+
+figure:hover figcaption {
+	top: calc(-3em - 10px);
+	opacity: 1;
+}
